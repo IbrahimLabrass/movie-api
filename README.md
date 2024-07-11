@@ -24,7 +24,46 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Description
+
+This repository contains a NestJS-based API for managing a list of favorite movies. It includes authentication and authorization using JWT.
+
+## Requirements
+
+- Docker
+- Docker Compose
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo/movie-api.git
+   cd movie-api
+
+2. Create a .env file in the root directory and add your environment variables:
+
+DB_HOST=db
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=your_password_here
+DB_NAME=movies_db
+JWT_SECRET=your_jwt_secret_here
+
+## API Endpoints
+
+### Authentication
+
+- **POST** `/auth/login`: Logs in a user and returns a JWT token.
+- **POST** `/auth/register`: Registers a new user.
+
+### Movies
+
+- **GET** `/movies`: Returns a list of favorite movies.
+- **GET** `/movies/:id`: Returns a movie by ID.
+- **POST** `/movies`: Creates a new movie.
+- **PUT** `/movies/:id`: Updates a movie by ID.
+- **DELETE** `/movies/:id`: Deletes a movie by ID.
 
 ## Installation
 
@@ -43,6 +82,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+# Build and start the containers:
+$ docker-compose up --build
+
 ```
 
 ## Test
@@ -70,4 +112,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+Replace placeholders like `your-repo`, `your_password_here`, `your_jwt_secret_here`, `Your Name`, `Your Website`, and `@yourtwitterhandle` with your actual project details and author information. This structure integrates your specific project setup into the NestJS README template effectively.
+
+
+
+
+
